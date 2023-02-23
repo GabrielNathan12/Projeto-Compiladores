@@ -7,6 +7,7 @@ FP: ')';
 
 ENTR: 'input';
 SAI: 'output';
+SAIQL: 'outputql';
 
 OP_ARI: '+'|'-'|'*'|'/';
 OP_LOG: 'and'|'or';

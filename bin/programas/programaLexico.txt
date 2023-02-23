@@ -1,7 +1,7 @@
 main(){
-    outputql(“Digite a base do triângulo ”);
+    outputql(“Digite a base do triangulo ”);
     inteiro base = input(base);
-    outputql(“Digite a altura do triângulo ”);
+    outputql(“Digite a altura do triangulo ”);
     inteiro altura = input(altura);
     output((base*altura)/2);
 }
