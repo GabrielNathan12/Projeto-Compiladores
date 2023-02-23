@@ -1,4 +1,6 @@
 grammar Gramatica;
+
+
 MAIN: 'main';
 
 TIPO: 'int'| 'real' | 'string';
@@ -9,14 +11,22 @@ ENTR: 'input';
 SAI: 'output';
 SAIQL: 'outputql';
 
+
 OP_ARI: '+'|'-'|'*'|'/';
-OP_LOG: 'and'|'or';
-OP: '>'| '<' | '>=' | '<=' | '=';
+OP_LOG: 'and'|'or'| 'not';
+OP: '>'| '<' | '>=' | '<=' | '==' | '=';
 
 VAR: LETRA((DIGITO|LETRA)+)?;
 NUM: DIGITO+('.' DIGITO)?;
 
-PC: 'para'| 'funcao'| 'se' | 'senaose' | 'senao' | 'retorna';
+
+LOOP: 'para';
+FUNC: 'funcao';
+COND: 'se';
+SENAO: 'senaose';
+NAO: 'naose';
+RETURN: 'retorna';
+
 AC: '{';
 FC: '}';
 DEL: ';';
@@ -24,4 +34,4 @@ DEL: ';';
 fragment LETRA: [a-zA-Z];
 fragment DIGITO: [0-9];
 
-WS:[ \r\t\n] ->skip;
+WS:[ \r\t\n\'##'] ->skip;

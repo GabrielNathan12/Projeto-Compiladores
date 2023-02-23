@@ -1,0 +1,56 @@
+token literal names:
+null
+'main'
+null
+'('
+')'
+'input'
+'output'
+'outputql'
+null
+null
+null
+null
+null
+'para'
+'funcao'
+'se'
+'senaose'
+'naose'
+'retorna'
+'{'
+'}'
+';'
+null
+
+token symbolic names:
+null
+MAIN
+TIPO
+AP
+FP
+ENTR
+SAI
+SAIQL
+OP_ARI
+OP_LOG
+OP
+VAR
+NUM
+LOOP
+FUNC
+COND
+SENAO
+NAO
+RETURN
+AC
+FC
+DEL
+WS
+
+rule names:
+loop
+
+
+atn:
+[3, 24715, 42794, 33075, 47597, 16764, 15335, 30598, 22884, 3, 24, 7, 4, 2, 9, 2, 3, 2, 3, 2, 3, 2, 2, 2, 3, 2, 2, 2, 2, 5, 2, 4, 3, 2, 2, 2, 4, 5, 3, 2, 2, 2, 5, 3, 3, 2, 2, 2, 2]
