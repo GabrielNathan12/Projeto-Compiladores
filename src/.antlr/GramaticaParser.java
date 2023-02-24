@@ -1,4 +1,4 @@
-// Generated from c:\Users\gabri\OneDrive - estudante.ufla.br\Área de Trabalho\Projeto-Compiladores\src\Gramatica.g4 by ANTLR 4.9.2
+// Generated from c:\Users\gabri\OneDrive - estudante.ufla.br\ï¿½rea de Trabalho\Projeto-Compiladores\src\Gramatica.g4 by ANTLR 4.9.2
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -16,14 +16,15 @@ public class GramaticaParser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		MAIN=1, TIPO=2, AP=3, FP=4, ENTR=5, SAI=6, SAIQL=7, OP_ARI=8, OP_LOG=9, 
-		OP=10, VAR=11, NUM=12, LOOP=13, FUNC=14, COND=15, SENAO=16, NAO=17, RETURN=18, 
-		AC=19, FC=20, DEL=21, WS=22;
+		MAIN=1, TIPO=2, AP=3, FP=4, ENTR=5, SAI=6, SAIQL=7, LOOP=8, FUNC=9, COND=10, 
+		SENAO=11, NAO=12, RETURN=13, OP_ARI=14, OP_BOOL=15, OP_LOG=16, OP=17, 
+		ATRI=18, ACENT=19, VAR=20, NUMINT=21, NUMREAL=22, STRING=23, AC=24, FC=25, 
+		DEL=26, COM=27, WS=28;
 	public static final int
-		RULE_loop = 0;
+		RULE_prog = 0;
 	private static String[] makeRuleNames() {
 		return new String[] {
-			"loop"
+			"prog"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
@@ -31,16 +32,18 @@ public class GramaticaParser extends Parser {
 	private static String[] makeLiteralNames() {
 		return new String[] {
 			null, "'main'", null, "'('", "')'", "'input'", "'output'", "'outputql'", 
-			null, null, null, null, null, "'para'", "'funcao'", "'se'", "'senaose'", 
-			"'naose'", "'retorna'", "'{'", "'}'", "';'"
+			"'para'", "'funcao'", "'se'", "'senaose'", "'naose'", "'retorna'", null, 
+			null, null, null, "'='", null, null, null, null, null, "'{'", "'}'", 
+			"';'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, "MAIN", "TIPO", "AP", "FP", "ENTR", "SAI", "SAIQL", "OP_ARI", "OP_LOG", 
-			"OP", "VAR", "NUM", "LOOP", "FUNC", "COND", "SENAO", "NAO", "RETURN", 
-			"AC", "FC", "DEL", "WS"
+			null, "MAIN", "TIPO", "AP", "FP", "ENTR", "SAI", "SAIQL", "LOOP", "FUNC", 
+			"COND", "SENAO", "NAO", "RETURN", "OP_ARI", "OP_BOOL", "OP_LOG", "OP", 
+			"ATRI", "ACENT", "VAR", "NUMINT", "NUMREAL", "STRING", "AC", "FC", "DEL", 
+			"COM", "WS"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -94,19 +97,22 @@ public class GramaticaParser extends Parser {
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 
-	public static class LoopContext extends ParserRuleContext {
-		public LoopContext(ParserRuleContext parent, int invokingState) {
+	public static class ProgContext extends ParserRuleContext {
+		public TerminalNode MAIN() { return getToken(GramaticaParser.MAIN, 0); }
+		public ProgContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_loop; }
+		@Override public int getRuleIndex() { return RULE_prog; }
 	}
 
-	public final LoopContext loop() throws RecognitionException {
-		LoopContext _localctx = new LoopContext(_ctx, getState());
-		enterRule(_localctx, 0, RULE_loop);
+	public final ProgContext prog() throws RecognitionException {
+		ProgContext _localctx = new ProgContext(_ctx, getState());
+		enterRule(_localctx, 0, RULE_prog);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
+			setState(2);
+			match(MAIN);
 			}
 		}
 		catch (RecognitionException re) {
@@ -121,8 +127,8 @@ public class GramaticaParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\30\7\4\2\t\2\3\2"+
-		"\3\2\3\2\2\2\3\2\2\2\2\5\2\4\3\2\2\2\4\5\3\2\2\2\5\3\3\2\2\2\2";
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\36\7\4\2\t\2\3\2"+
+		"\3\2\3\2\2\2\3\2\2\2\2\5\2\4\3\2\2\2\4\5\7\3\2\2\5\3\3\2\2\2\2";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {
