@@ -1,8 +1,8 @@
+import org.antlr.runtime.ANTLRInputStream;
+import org.antlr.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.Token;
-
-
 
 import java.io.IOException;
 public class App{
@@ -21,5 +21,18 @@ public class App{
         catch(IOException e){
             e.printStackTrace();
         }
+
+      
+        ANTLRInputStream stream = new ANTLRInputStream();
+
+        CommonTokenStream tokenStream = new CommonTokenStream();
+
+        System.out.println("Sei la o que e isso = " + stream.toString());
+        System.out.println("Tambem nao sei ainda = " + tokenStream.toString());
+
+
+       
     }
+
+
 }
