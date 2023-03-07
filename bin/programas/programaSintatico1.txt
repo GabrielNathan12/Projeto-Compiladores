@@ -1,0 +1,32 @@
+funcao inteiro Fibonacci(inteiro n){
+    inteiro fibo = 0;
+    inteiro antes = 0;
+
+    para(inteiro i = 1; i <= n; i+=1){
+        se(i == 1){
+            fibo = 1;
+            antes = 0;
+        }
+    }
+
+    senao{
+        fibo += antes;
+        antes = fibo - antes;
+    }
+    retorna fibo;
+}
+
+main()
+    ## Comenta apenas uma linha do trecho do código
+    ## outputql significa saída com quebra de linha
+    ## output significa saída sem quebra de linha
+    outputql("Digite um número");
+
+    inteiro n = input(n);
+    inteiro soma = 0;
+    
+    para(inteiro i = 0; i < n; i+=1){
+        soma += Fibonacci(i);
+    }
+    output(soma);
+}
