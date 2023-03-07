@@ -22,7 +22,8 @@ main(){
     ## output significa saída sem quebra de linha
     outputql("Digite um número");
 
-    inteiro n = input(n);
+    inteiro n;
+    input(n);
     inteiro soma = 0;
     
     para(inteiro i = 0; i < n; i=i+1){

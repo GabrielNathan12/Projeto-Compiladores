@@ -1,13 +1,13 @@
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
-import org.antlr.v4.runtime.Token;
 import org.antlr.v4.runtime.tree.ParseTree;
+import org.antlr.v4.runtime.tree.ParseTreeWalker;
 
 import java.io.IOException;
 public class App{
     public static void main(String[] args){
-        String arquivo = "./src/programas/programaLexico2.txt";
+        String arquivo = "./src/programas/programaErroLexico.txt";
         try{
             CharStream input = CharStreams.fromFileName(arquivo);
             GramaticaLexer lexer = new GramaticaLexer(input);
@@ -22,29 +22,23 @@ public class App{
             GramaticaParser parser = new GramaticaParser(tokenStream);
 
             ParseTree ast = parser.prog();
+            Semantica listener = new Semantica();
+            
+            ParseTreeWalker parseTreeWalker = new ParseTreeWalker();
 
             
 
             if(parser.getNumberOfSyntaxErrors() > 0){
-                System.out.println("Ocorreu erros de compilacao: ");
+                System.out.println("Arvore Sintatica nao construido ");
             }else{
-                System.out.println("Compilado com sucesso meu consagrado!!!");
+                parseTreeWalker.walk(listener, ast);
+                System.out.println("Arvore Sintatica construida com sucesso!!!");
             }
 
         }
         catch(IOException e){
             e.printStackTrace();
         }
-
-      
-    // ANTLRInputStream stream = new ANTLRInputStream();
-
-    // CommonTokenStream tokenStream = new CommonTokenStream();
-
-    // System.out.println("Sei la o que e isso = " + stream.toString());
-    // System.out.println("Tambem nao sei ainda = " + tokenStream.toString());
-
-
        
     }
 

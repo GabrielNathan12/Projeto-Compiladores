@@ -1,19 +1,23 @@
 grammar Gramatica;
 //Gramatica analise sintatica
-prog: funcao*;
-funcao: 'funcao' TIPO VAR '(' argumentos ')' bloco | 'main' '(' ')' bloco;
+prog: funcoes;
+funcoes: funcao*;
+funcao: 'funcao' TIPO VAR '(' argumentos? ')' bloco | 'main' '(' ')' bloco;
 bloco: '{' instrucoes '}'; 
 argumentos: (argumento ',')*argumento;
 argumento: TIPO VAR; 
 instrucoes: instrocao* ;
-instrocao: se | para | callFuncao ';' | decVar ';' | atribuicao ';' | RETURN expressao ';';
+instrocao: se | para | callFuncao ';' | decVar ';' | atribuicao ';' | retorna ';';
+retorna: RETURN expressao;
 se: 'se' '(' expressao ')' bloco ('senaose' '(' expressao ')' bloco)* ('naose' bloco)?;
-para: 'para' '(' decVar ';' expressao ';' atribuicao ')' bloco;
-callFuncao: (VAR| 'input' | 'output' | 'outputql')  '(' parametros ')' ;
+para: 'para' '(' decVar ';' controle ';' atribuicao ')' bloco;
+controle: expressao;
+callFuncao: nomeFuncao  '(' parametros? ')' ;
+nomeFuncao: (VAR| 'input' | 'output' | 'outputql');
 parametros: (expressao ',')* expressao;
 decVar: TIPO VAR ('=' expressao)?;
 atribuicao: VAR ('=' | ATRIBUICOES) expressao;
-expressao: VAR 
+expressao: expressaoVar  
          | callFuncao
          | NUMINT | NUMREAL | STRING | OP_BOOL
          | '(' expressao ')'
@@ -22,6 +26,7 @@ expressao: VAR
          | expressao OP expressao
          | expressao OP_LOG expressao
         ;
+expressaoVar: VAR;
 
 
 //Gramatica analise lexica
@@ -29,7 +34,7 @@ expressao: VAR
 
 MAIN: 'main';
 
-TIPO: 'inteiro'| 'real' | 'string';
+TIPO: 'inteiro'| 'real' | 'string' | 'booleano';
 AP: '(';
 FP: ')';
  
