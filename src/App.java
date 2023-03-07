@@ -10,7 +10,7 @@ public class App{
         String arquivo = "./src/programas/programaLexico2.txt";
         try{
             CharStream input = CharStreams.fromFileName(arquivo);
-            gramaticaLexer lexer = new gramaticaLexer(input);
+            GramaticaLexer lexer = new GramaticaLexer(input);
             while(!lexer._hitEOF){
                 Token token = lexer.nextToken();
                 System.out.println("Token: "+ token.toString());
@@ -23,12 +23,12 @@ public class App{
         }
 
       
-        ANTLRInputStream stream = new ANTLRInputStream();
+    // ANTLRInputStream stream = new ANTLRInputStream();
 
-        CommonTokenStream tokenStream = new CommonTokenStream();
+    // CommonTokenStream tokenStream = new CommonTokenStream();
 
-        System.out.println("Sei la o que e isso = " + stream.toString());
-        System.out.println("Tambem nao sei ainda = " + tokenStream.toString());
+    // System.out.println("Sei la o que e isso = " + stream.toString());
+    // System.out.println("Tambem nao sei ainda = " + tokenStream.toString());
 
 
        

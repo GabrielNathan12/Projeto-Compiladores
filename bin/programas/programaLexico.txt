@@ -1,7 +1,37 @@
-main(){
-    outputql(“Digite a base do triangulo ”);
-    inteiro base = input(base);
-    outputql(“Digite a altura do triangulo ”);
-    inteiro altura = input(altura);
-    output((base*altura)/2);
-}
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><gals_file><options_list><option><name>scanner.gen</name><value>true</value></option><option><name>parser.gen</name><value>true</value></option><option><name>scanner.sensitive</name><value>true</value></option><option><name>scanner.name</name><value>Lexico</value></option><option><name>parser.name</name><value>Sintatico</value></option><option><name>semantic.name</name><value>Semantico</value></option><option><name>package</name><value/></option><option><name>language</name><value>java</value></option><option><name>language</name><value>java</value></option><option><name>parser</name><value>SLR</value></option><option><name>input</name><value>stream</value></option><option><name>table.scanner</name><value>full</value></option></options_list><data><definitions>DIGITO: [0-9]&#13;
+WS:[\s\r\t\n]&#13;
+LETRA: [a-z A-Z]&#13;
+&#13;
+</definitions><tokens>prog: MAIN&#13;
+&#13;
+&#13;
+MAIN: main&#13;
+&#13;
+TIPO: inteiro | real | string&#13;
+AP: \(&#13;
+FP: \)&#13;
+ENTR:input&#13;
+SAI: output&#13;
+SAIQL: outputql&#13;
+LOOP: para&#13;
+FUNC: funcao&#13;
+COND: se&#13;
+SENAO: senaose&#13;
+NAO: naose&#13;
+RETURN: retorna&#13;
+OP_ARI: "+" | "-" | "*" | "/" | "%"&#13;
+OP_BOOL: "verdade" | "falso" &#13;
+OP_LOG:  "and" | "or" |  "not"&#13;
+OP:  "&gt;" |  "&lt;"  |  "&gt;="  |  "&lt;=" |  "=="  | "!=" &#13;
+ATRI:  = &#13;
+VAR: "{LETRA}({DIGITO}|{LETRA})*"&#13;
+NUMINT: "DIGITO+"&#13;
+NUMREAL: "DIGITO+'.'DIGITO+"&#13;
+STRING: "({LETRA}|{DIGITO}.)*?"&#13;
+AC: \{&#13;
+FC: \}&#13;
+DEL: ;&#13;
+ERRO: .&#13;
+&#13;
+:{WS}&#13;
+</tokens><non_terminals>&lt;MAIN&gt;</non_terminals><grammar>&lt;MAIN&gt; ::= MAIN ;</grammar></data></gals_file>
