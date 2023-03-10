@@ -3,14 +3,17 @@ import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
-
+import org.antlr.v4.runtime.Token;
 import java.io.IOException;
 public class App{
     public static void main(String[] args){
-        String arquivo = "./src/programas/programaErroLexico.txt";
+        String arquivo = "./src/programas/programaLexico2.txt";
         try{
             CharStream input = CharStreams.fromFileName(arquivo);
             GramaticaLexer lexer = new GramaticaLexer(input);
+
+            /**Se caso precisar ver os tokes comenta as linhas 23 a linha 39 e descomenta esse while */
+            
             // while(!lexer._hitEOF){
             //     Token token = lexer.nextToken();
             //     System.out.println("Token: "+ token.toString());

@@ -20,6 +20,7 @@ main(){
     ## Comenta apenas uma linha do trecho do código
     ## outputql significa saída com quebra de linha
     ## output significa saída sem quebra de linha
+
     outputql("Digite um número");
 
     inteiro n;
