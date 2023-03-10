@@ -21,9 +21,10 @@ main(){
     ## outputql significa saída com quebra de linha
     ## output significa saída sem quebra de linha
 
+    
     outputql("Digite um número");
 
-    inteiro n;
+    inteiro n = fibo;
     input(n);
     inteiro soma = 0;
     

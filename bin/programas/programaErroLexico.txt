@@ -1,9 +1,17 @@
 main(){
-    outputql("Digite a base do triangulo ");
-    inteiro base;
-    input(base);
-    outputql("Digite a altura do triangulo ");
-    inteiro altura;
-    input(altura);
-    output((base*altura)/2);
+	## Esse programa escrito na linguagem GT 
+	## Calcula a área de um triângulo com números inteiros
+ 
+	outputql(“Digite a base do triângulo");
+	
+	inteiro base;
+	##  não é reconhecido
+	input(ba);
+	
+	outputql(“Digite a altura do triângulo ”);
+	
+inteiro altura;
+	input(altura);
+	
+	output((base * altura)/ 2);
 }

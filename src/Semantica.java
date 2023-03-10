@@ -28,6 +28,7 @@ public class Semantica extends GramaticaBaseListener{
         }
      }
 
+    
      /** Verifica o controle do para */
      @Override
      public void enterControle(GramaticaParser.ControleContext ctx) {
@@ -59,7 +60,9 @@ public class Semantica extends GramaticaBaseListener{
 
         if(!Variaveis.containsKey(nome)){
             System.out.println("Variavel nao existe " + nome);
+            
         }
+        return;
      }
      /** declaracao da main obrigatoria 
       * Se nao e uma funcao nova
