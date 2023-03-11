@@ -1,18 +1,10 @@
-## Getting Started
+## Projeto da disciplina GCC 130- Compiladores
+# Para executar o programa basta executar a classe App.java
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+<br> Se caso for necessário alguma alteração no arquivo .g4
+<br> Será necessário compilar o antlr de novo com o comando 
+- `cd src`
+- `java -jar ..\lib\antlr-4.11.1-complete.jar .\Gramatica.g4`
 
-## Folder Structure
 
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+ <a href ="https://www.antlr.org/api/Java/"> link do antrl para dowload </a> 
