@@ -18,7 +18,6 @@ public class Semantica extends GramaticaBaseListener{
             System.out.println("Funcao main nao declarada");
         }
      }
-
      /**Verifica o tipo de retorno e o mesmo da funcao */
      @Override
      public void enterRetorna(GramaticaParser.RetornaContext ctx) {
@@ -103,9 +102,11 @@ public class Semantica extends GramaticaBaseListener{
          if(Variaveis.containsKey(nome)){
             System.out.println("Variavel ja declarada "+ nome);
             return;
+         }else{
+            Variaveis.put(nome, tipo);
          }
 
-         Variaveis.put(nome, tipo);
+        
 
          if(ctx.expressao() != null){
             if(!verificaTipo(tipo, ctx.expressao())){

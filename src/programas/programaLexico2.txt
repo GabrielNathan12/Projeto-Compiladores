@@ -24,7 +24,7 @@ main(){
     
     outputql("Digite um número");
 
-    inteiro n = fibo;
+    inteiro n;
     input(n);
     inteiro soma = 0;
     

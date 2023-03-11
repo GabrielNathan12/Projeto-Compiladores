@@ -9,7 +9,7 @@ main(){
 	
 	outputql("Digite a altura do triângulo ");
 	
-    inteiro altura;
+inteiro altura;
 	input(altura);
 	
 	output((base * altura)/ 2);

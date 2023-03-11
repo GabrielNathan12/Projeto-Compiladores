@@ -5,12 +5,17 @@ main(){
 	outputql("Digite a base do triângulo");
 	
 	inteiro base;
+	##  não é reconhecido
 	input(base);
 	
+         ## Faltou “ ) no final da linha 
 	outputql("Digite a altura do triângulo ");
 	
-    inteiro altura;
+    ## variavel nao declarada
+    altura;
 	input(altura);
 	
-	output((base * altura)/ 2);
+	## faltou uma operação aritmética 
+	output((base * altura) / 2);
 }
+

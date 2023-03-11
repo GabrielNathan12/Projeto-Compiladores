@@ -1,0 +1,38 @@
+funcao inteiro Fibonacci(inteiro n){
+    ## faltou o = 
+    inteiro fibo = 0;
+    inteiro antes = 0;
+
+    para(inteiro i = 1; i <= n; i= i+1){
+        se(i == 1){
+            fibo = 1;
+            antes = 0;
+        }naose{
+            fibo += antes;
+            antes = fibo - antes;
+        }
+    }    
+    ## tipo da funcao espera um inteiro e nao uma string
+    retorna "fibo";
+}
+
+## Funcao main e obrigatoria
+(){
+   ## Programa escrito na linguagem GT
+   ## Programa calcula a soma da sequência de Fibonacci 
+   ## dado o número que o usuário digitou 
+
+    outputql("Digite um número");
+    ## @ nao e reconhecido como uma variável na linguagem 
+    inteiro @;
+    input(n);
+    ## faltou um delimitador  e esta atribuido ao numero real
+    inteiro soma = 0.0
+    
+    para(inteiro i = 0; i < n; i=i+1){
+        	## soma está escrito errado 
+
+so += Fibonacci(i);
+    }
+    output(soma);
+}

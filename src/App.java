@@ -7,7 +7,7 @@ import org.antlr.v4.runtime.Token;
 import java.io.IOException;
 public class App{
     public static void main(String[] args){
-        String arquivo = "./src/programas/programaSintatico1.txt";
+        String arquivo = "./src/programas/programaSemantico2.txt";
         try{
             CharStream input = CharStreams.fromFileName(arquivo);
             GramaticaLexer lexer = new GramaticaLexer(input);
